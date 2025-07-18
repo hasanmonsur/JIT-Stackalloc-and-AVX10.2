@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	<EnableAVX10>true</EnableAVX10>
+	<PlatformTarget>x64</PlatformTarget>
+	<EnableEnhancedInstructionSet>AVX10</EnableEnhancedInstructionSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="global.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.15.2" />
+    <PackageReference Include="Microsoft.ML" Version="4.0.2" />
+    <PackageReference Include="Microsoft.ML.CpuMath" Version="4.0.2" />
+  </ItemGroup>
+
+</Project>
